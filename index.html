@@ -457,7 +457,7 @@ footer { position: relative; z-index: 1; background: rgba(0,0,0,.35); border-top
     <div class="hero-content fade-up">
       <div class="hero-badge">🎓 Educator &amp; Basketball Coach</div>
       <h1>Helping Students <span class="accent">Grow, Learn</span><br/>&amp; Reach Their Potential</h1>
-      <p class="hero-desc">Khem Kumari Dhungana is a school teacher with a Master's degree in Education, currently teaching at Greenfield Valley School <em>(placeholder name — to be updated)</em>. She also coaches basketball and offers patient, personalized tutoring — online and in person — for students who want to build confidence and truly understand their subjects.</p>
+      <p class="hero-desc">Khem Kumari Dhungana is a school teacher with a Master's degree in Education, currently teaching at Shramsheel Vidyapith, Nepal. She also coaches basketball and offers patient, personalized tutoring — online and in person — for students who want to build confidence and truly understand their subjects.</p>
       <div class="hero-btns">
         <a href="#contact" class="btn-primary">📅 Book a Tutoring Session</a>
         <a href="#coaching" class="btn-outline">🏀 Basketball Coaching →</a>
@@ -469,7 +469,7 @@ footer { position: relative; z-index: 1; background: rgba(0,0,0,.35); border-top
           <div class="card-icon">📘</div>
           <div>
             <div class="card-title">Teaching &amp; Tutoring Profile</div>
-            <div class="card-sub">Greenfield Valley School <em>(placeholder)</em></div>
+            <div class="card-sub">Shramsheel Vidyapith, Nepal</div>
           </div>
         </div>
         <div class="badge-row">
@@ -517,10 +517,10 @@ footer { position: relative; z-index: 1; background: rgba(0,0,0,.35); border-top
       <div class="edu-card fade-up d3">
         <div class="edu-step">4</div>
         <h4>Teaching Today</h4>
-        <p>Currently teaching at Greenfield Valley School <em>(placeholder name — to be updated)</em>, and coaching basketball alongside her classroom work.</p>
+        <p>Currently teaching at Shramsheel Vidyapith, Nepal, and coaching basketball alongside her classroom work.</p>
       </div>
     </div>
-    <p class="edu-note">* School name is a placeholder and will be updated with the real school name.</p>
+    
   </div>
 </section>
 
@@ -647,17 +647,17 @@ footer { position: relative; z-index: 1; background: rgba(0,0,0,.35); border-top
           </div>
         </div>
       </div>
-      <div class="contact-form fade-up d2">
+      <form class="contact-form fade-up d2" id="kemContactForm">
         <h3 style="margin-bottom:1.5rem; font-size:1.15rem;">Send a Message</h3>
         <div class="form-row">
-          <div class="form-group"><label>First Name *</label><input type="text" placeholder="Jane" /></div>
-          <div class="form-group"><label>Last Name *</label><input type="text" placeholder="Smith" /></div>
+          <div class="form-group"><label>First Name *</label><input type="text" name="firstName" placeholder="Jane" required /></div>
+          <div class="form-group"><label>Last Name *</label><input type="text" name="lastName" placeholder="Smith" required /></div>
         </div>
-        <div class="form-group"><label>Email Address *</label><input type="email" placeholder="jane@example.com" /></div>
-        <div class="form-group"><label>Student's Grade / Age (optional)</label><input type="text" placeholder="e.g. Grade 7, age 12" /></div>
+        <div class="form-group"><label>Email Address *</label><input type="email" name="email" placeholder="jane@example.com" required /></div>
+        <div class="form-group"><label>Student's Grade / Age (optional)</label><input type="text" name="studentGrade" placeholder="e.g. Grade 7, age 12" /></div>
         <div class="form-group">
           <label>I'm Interested In</label>
-          <select>
+          <select name="interest">
             <option value="">Select an option...</option>
             <option>Online Tutoring</option>
             <option>In-Person Tutoring</option>
@@ -665,9 +665,9 @@ footer { position: relative; z-index: 1; background: rgba(0,0,0,.35); border-top
             <option>General Inquiry</option>
           </select>
         </div>
-        <div class="form-group"><label>Message</label><textarea placeholder="Tell me a bit about the subject, schedule, or goals you have in mind..."></textarea></div>
-        <button class="btn-submit">💌 Send Message</button>
-      </div>
+        <div class="form-group"><label>Message</label><textarea name="message" placeholder="Tell me a bit about the subject, schedule, or goals you have in mind..." required></textarea></div>
+        <button type="submit" class="btn-submit">💌 Send Message</button>
+      </form>
     </div>
     <div style="text-align:center; margin-top:2.5rem;">
       <p style="font-size:.88rem; font-weight:700; letter-spacing:.06em; margin-bottom:.85rem; background:linear-gradient(135deg,#ffffff,#FFD23F); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">Or reach out directly:</p>
@@ -724,8 +724,9 @@ footer { position: relative; z-index: 1; background: rgba(0,0,0,.35); border-top
 <div id="privacy-modal">
   <div class="privacy-box">
     <h3>Privacy Notice</h3>
-    <p>This website is a personal tutoring &amp; coaching site for Khem Kumari Dhungana. Information submitted through the contact form (such as your name, email, and message) is used only to respond to your inquiry and schedule tutoring or coaching sessions — it is never sold or shared with third parties.</p>
-    <p>This site may use a website chat widget to help answer visitor questions. That chat provider may use cookies to operate the chat function. No sensitive personal information should be shared through the chat or contact form.</p>
+    <p>This website is a personal tutoring &amp; coaching site for Khem Kumari Dhungana. Information submitted through the contact form (such as your name, email, and message) is used only to respond to your inquiry and schedule tutoring or coaching sessions. It is never sold, and is only shared with the third-party services below that help this site function.</p>
+    <p>This site uses <strong>Formspree</strong> to process the contact form. When you submit the form, your details (such as name, email, and message) are sent through Formspree's servers to Khem Kumari's email inbox. Formspree does not sell your data — see Formspree's own privacy policy at formspree.io/legal/privacy-policy for details on how they handle submitted information.</p>
+    <p>This site uses <strong>Tidio</strong> to power the live chat widget. If you use the chat, Tidio may collect information such as your messages, browser/device details, and IP address to operate the chat feature and may use cookies to do so — see Tidio's privacy policy at tidio.com/privacy-policy for details. No sensitive personal information should be shared through the chat or contact form.</p>
     <p>If you have questions about your information, contact kdhungana6@gmail.com.</p>
     <button type="button" class="privacy-close" id="closePrivacy">Close</button>
   </div>
@@ -733,13 +734,8 @@ footer { position: relative; z-index: 1; background: rgba(0,0,0,.35); border-top
 
 <button id="scroll-top" aria-label="Back to top">&#x2191;</button>
 
-<!-- ─── CHAT WIDGET PLACEHOLDER ───
-     Ram's business site uses Tidio (https://www.tidio.com) for live chat.
-     To give Khem Kumari the same chatbot, create a free Tidio account for
-     her and paste her own widget script tag here, e.g.:
-     <script src="//code.tidio.co/HER_OWN_WIDGET_KEY.js" async></script>
-     (Do not reuse someone else's Tidio key — each site needs its own.)
--->
+<!-- ─── TIDIO LIVE CHAT WIDGET (Khem Kumari's own account) ─── -->
+<script src="//code.tidio.co/5fzwqmbohkwtylfgndozgb7gonciv2lr.js" async></script>
 
 <script>
   document.getElementById("copy-yr").textContent = new Date().getFullYear();
@@ -853,16 +849,38 @@ footer { position: relative; z-index: 1; background: rgba(0,0,0,.35); border-top
     });
   });
 
-  // ─── FORM SUBMIT (UI feedback only — no backend wired up yet) ───
-  document.querySelector('.btn-submit').addEventListener('click', function(e) {
+  // ─── FORM SUBMIT (real submission via Formspree) ───
+  var kemContactForm = document.getElementById('kemContactForm');
+  kemContactForm.addEventListener('submit', function(e) {
     e.preventDefault();
-    var btn = this;
-    btn.textContent = '✅ Message Sent! I\'ll be in touch soon.';
-    btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
-    setTimeout(function() {
-      btn.textContent = '💌 Send Message';
-      btn.style.background = '';
-    }, 4000);
+    var btn = kemContactForm.querySelector('.btn-submit');
+    var origText = btn.textContent;
+    var formData = new FormData(kemContactForm);
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    fetch('https://formspree.io/f/mjgqjkbq', {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    }).then(function(response) {
+      if (response.ok) {
+        btn.textContent = '✅ Message Sent! I\'ll be in touch soon.';
+        btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+        kemContactForm.reset();
+      } else {
+        btn.textContent = '⚠️ Something went wrong — please email directly.';
+        btn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+      }
+    }).catch(function() {
+      btn.textContent = '⚠️ Something went wrong — please email directly.';
+      btn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+    }).finally(function() {
+      btn.disabled = false;
+      setTimeout(function() {
+        btn.textContent = origText;
+        btn.style.background = '';
+      }, 5000);
+    });
   });
 
   // ─── TEAMS BUTTON PLACEHOLDER NOTICE ───
