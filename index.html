@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Khem Kumari Dhungana | Educator, M.Ed. &amp; Basketball Coach — Online &amp; In-Person Tutoring</title>
-<meta name="description" content="Khem Kumari Dhungana — school teacher (M.Ed.), basketball coach, and tutor offering online and in-person tutoring sessions." />
+<title>Khem Kumari Dhungana | Educator, M.Ed. &amp; Certified Sports Coach — Online &amp; In-Person Tutoring</title>
+<meta name="description" content="Khem Kumari Dhungana — school teacher (M.Ed.), certified Table Tennis &amp; Netball coach, and tutor offering online and in-person tutoring sessions." />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fraunces:wght@600;700;800&display=swap" rel="stylesheet" />
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -292,6 +292,66 @@ h1 .accent { background: linear-gradient(90deg, var(--coral), var(--gold)); -web
 @keyframes coachPulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.035); } }
 @media (max-width: 900px) { .coach-wrap { grid-template-columns: 1fr; } .coach-visual { order: -1; } .coach-orb { width: 200px; height: 200px; font-size: 4rem; } }
 
+/* ── ACHIEVEMENTS / CERTIFICATIONS ── */
+#achievements { background: rgba(0,0,0,.10); }
+.achieve-stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin-bottom: 3rem; }
+.achieve-stat {
+  background: linear-gradient(145deg, rgba(30,22,64,.9), rgba(20,15,48,.94));
+  border: 1px solid rgba(255,255,255,.08); border-radius: 18px; padding: 1.6rem 1rem; text-align: center;
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+.achieve-stat:hover { transform: translateY(-6px); border-color: rgba(255,210,63,.35); box-shadow: 0 18px 40px rgba(0,0,0,.35); }
+.achieve-stat .num {
+  font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 800;
+  background: linear-gradient(90deg, var(--coral), var(--gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  display: block; line-height: 1.1; margin-bottom: .4rem;
+}
+.achieve-stat .lbl { font-size: .73rem; color: var(--gray); letter-spacing: .04em; text-transform: uppercase; font-weight: 600; }
+@media (max-width: 860px) { .achieve-stats-row { grid-template-columns: repeat(2, 1fr); } }
+
+.achieve-filter-row { display: flex; justify-content: center; flex-wrap: wrap; gap: .7rem; margin-bottom: 2.6rem; }
+.achieve-filter-btn {
+  background: rgba(255,255,255,.05); border: 1.5px solid rgba(255,255,255,.14); color: var(--light);
+  padding: .55rem 1.3rem; border-radius: 50px; font-size: .82rem; font-weight: 700; letter-spacing: .02em;
+  cursor: pointer; font-family: 'Inter', sans-serif;
+  transition: transform .15s ease, filter .15s ease, box-shadow .15s ease, background .25s, border-color .25s;
+}
+.achieve-filter-btn:hover { transform: scale(0.96) translateY(2px); filter: brightness(0.92); }
+.achieve-filter-btn:active { transform: scale(0.92) translateY(3px); filter: brightness(0.8); }
+.achieve-filter-btn.active { background: linear-gradient(135deg, var(--coral), var(--gold)); color: #2B0B3F; border-color: transparent; box-shadow: 0 8px 22px rgba(255,77,141,.32); }
+
+.achieve-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.8rem; }
+@media (max-width: 1024px) { .achieve-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .achieve-grid { grid-template-columns: 1fr; } }
+
+.achieve-card { height: 300px; cursor: pointer; position: relative; }
+.achieve-card-inner { position: relative; width: 100%; height: 100%; }
+.achieve-card:hover .achieve-front { filter: brightness(1.05); }
+.achieve-front, .achieve-back {
+  position: absolute; inset: 0; border-radius: 20px; padding: 1.6rem;
+  display: flex; flex-direction: column; border: 1px solid rgba(255,255,255,.09);
+  box-shadow: 0 20px 50px rgba(0,0,0,.35);
+  transition: opacity .35s ease, transform .35s ease;
+}
+.achieve-front { background: linear-gradient(150deg, rgba(30,22,64,.94), rgba(20,15,48,.97)); opacity: 1; transform: scale(1); z-index: 2; }
+.achieve-back { background: linear-gradient(150deg, rgba(45,20,70,.97), rgba(20,15,48,.98)); overflow-y: auto; opacity: 0; transform: scale(.96); pointer-events: none; z-index: 1; }
+.achieve-card.flipped .achieve-front { opacity: 0; transform: scale(1.04); pointer-events: none; z-index: 1; }
+.achieve-card.flipped .achieve-back { opacity: 1; transform: scale(1); pointer-events: auto; z-index: 2; }
+.achieve-card[data-cat="tt"] .achieve-front { border-top: 4px solid; border-image: linear-gradient(90deg, var(--coral), var(--gold)) 1; }
+.achieve-card[data-cat="nb"] .achieve-front { border-top: 4px solid; border-image: linear-gradient(90deg, var(--violet), var(--mint)) 1; }
+.achieve-icon-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
+.achieve-icon { font-size: 2rem; }
+.achieve-cat-badge { font-size: .64rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; padding: .3rem .7rem; border-radius: 50px; }
+.achieve-card[data-cat="tt"] .achieve-cat-badge { background: rgba(255,77,141,.16); color: var(--coral2); border: 1px solid rgba(255,77,141,.35); }
+.achieve-card[data-cat="nb"] .achieve-cat-badge { background: rgba(123,97,255,.16); color: var(--violet2); border: 1px solid rgba(123,97,255,.4); }
+.achieve-title { font-size: 1rem; font-weight: 700; color: var(--white); font-family: 'Inter', sans-serif; margin-bottom: .5rem; line-height: 1.35; }
+.achieve-org { font-size: .77rem; color: var(--gray); margin-bottom: .35rem; }
+.achieve-date { font-size: .73rem; color: var(--mint); font-weight: 700; margin-bottom: .8rem; }
+.achieve-short { font-size: .79rem; color: var(--gray); line-height: 1.55; flex: 1; }
+.achieve-hint { font-size: .68rem; color: var(--gray); font-style: italic; margin-top: auto; opacity: .75; padding-top: .6rem; }
+.achieve-back h4 { font-size: .88rem; color: var(--gold); margin-bottom: .6rem; font-family: 'Inter', sans-serif; }
+.achieve-back p { font-size: .79rem; color: var(--light); line-height: 1.65; flex: 1; }
+
 /* ── WHY / PHILOSOPHY ── */
 .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
 .why-card {
@@ -442,6 +502,7 @@ footer { position: relative; z-index: 1; background: rgba(0,0,0,.35); border-top
     <li><a href="#about">About</a></li>
     <li><a href="#tutoring">Tutoring</a></li>
     <li><a href="#coaching">Coaching</a></li>
+    <li><a href="#achievements">Achievements</a></li>
     <li><a href="#why">Approach</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#contact" class="nav-cta">Book a Session</a></li>
@@ -455,12 +516,12 @@ footer { position: relative; z-index: 1; background: rgba(0,0,0,.35); border-top
 <section class="hero" id="home">
   <div class="hero-inner">
     <div class="hero-content fade-up">
-      <div class="hero-badge">🎓 Educator &amp; Basketball Coach</div>
+      <div class="hero-badge">🎓 Educator &amp; Certified Sports Coach</div>
       <h1>Helping Students <span class="accent">Grow, Learn</span><br/>&amp; Reach Their Potential</h1>
-      <p class="hero-desc">Khem Kumari Dhungana is a school teacher with a Master's degree in Education, currently teaching at Shramsheel Vidyapith, Nepal. She also coaches basketball and offers patient, personalized tutoring — online and in person — for students who want to build confidence and truly understand their subjects.</p>
+      <p class="hero-desc">Khem Kumari Dhungana is a school teacher with a Master's degree in Education, currently teaching at Shramsheel Vidyapith, Nepal. She is also a certified Table Tennis and Netball coach and offers patient, personalized tutoring — online and in person — for students who want to build confidence and truly understand their subjects.</p>
       <div class="hero-btns">
         <a href="#contact" class="btn-primary">📅 Book a Tutoring Session</a>
-        <a href="#coaching" class="btn-outline">🏀 Basketball Coaching →</a>
+        <a href="#achievements" class="btn-outline">🏆 View Achievements →</a>
       </div>
     </div>
     <div class="hero-visual fade-up d2">
@@ -474,18 +535,18 @@ footer { position: relative; z-index: 1; background: rgba(0,0,0,.35); border-top
         </div>
         <div class="badge-row">
           <div class="mini-badge"><span>🎓</span>M.Ed. Graduate</div>
-          <div class="mini-badge"><span>🏀</span>Basketball Coach</div>
+          <div class="mini-badge"><span>🏆</span>Certified Coach</div>
           <div class="mini-badge"><span>💻</span>Online &amp; In-Person</div>
         </div>
         <ul class="hero-card-list">
           <li><span class="tick">✓</span> Bachelor's &amp; Master's in Education</li>
           <li><span class="tick">✓</span> Patient, student-centered teaching style</li>
           <li><span class="tick">✓</span> Microsoft Teams, Google Meet &amp; Zoom sessions available</li>
-          <li><span class="tick">✓</span> Experience coaching basketball teams</li>
+          <li><span class="tick">✓</span> Certified coach &amp; official — Table Tennis &amp; Netball</li>
         </ul>
       </div>
       <div class="floating-badge b1">✅ Now Accepting Students</div>
-      <div class="floating-badge b2">🏀 Coaching Sign-Ups Open</div>
+      <div class="floating-badge b2">🏆 7 Certifications Earned</div>
     </div>
   </div>
 </section>
@@ -517,7 +578,7 @@ footer { position: relative; z-index: 1; background: rgba(0,0,0,.35); border-top
       <div class="edu-card fade-up d3">
         <div class="edu-step">4</div>
         <h4>Teaching Today</h4>
-        <p>Currently teaching at Shramsheel Vidyapith, Nepal, and coaching basketball alongside her classroom work.</p>
+        <p>Currently teaching at Shramsheel Vidyapith, Nepal, and coaching Table Tennis &amp; Netball alongside her classroom work.</p>
       </div>
     </div>
     
@@ -569,23 +630,178 @@ footer { position: relative; z-index: 1; background: rgba(0,0,0,.35); border-top
   <div class="section-inner">
     <div class="section-hd fade-up">
       <span class="eyebrow">Beyond the Classroom</span>
-      <h2>Basketball <span class="g">Coaching</span></h2>
+      <h2>Coaching <span class="g">&amp; Officiating</span></h2>
       <div class="section-divider"></div>
     </div>
     <div class="coach-wrap">
       <div class="coach-panel fade-up">
-        <h3>🏀 Coaching Student Athletes</h3>
-        <p>In addition to teaching, Khem Kumari has coached basketball, helping students build teamwork, discipline, and confidence both on and off the court. She believes sports and academics go hand in hand — the same focus and resilience that make a great student also make a great teammate.</p>
+        <h3>🏆 Coaching &amp; Officiating Student Athletes</h3>
+        <p>In addition to teaching, Khem Kumari is a nationally and internationally trained coach and competition official in Table Tennis and Netball, helping students build teamwork, discipline, and confidence both on and off the court. She believes sports and academics go hand in hand — the same focus and resilience that make a great student also make a great teammate.</p>
         <div class="coach-tags">
+          <span class="coach-tag">🏓 Table Tennis</span>
+          <span class="coach-tag">🏐 Netball</span>
           <span class="coach-tag">Teamwork</span>
           <span class="coach-tag">Discipline</span>
           <span class="coach-tag">Leadership</span>
           <span class="coach-tag">Confidence Building</span>
-          <span class="coach-tag">Youth Coaching</span>
         </div>
+        <a href="#achievements" class="btn-outline" style="margin-top:1.5rem;">🏆 View All Certifications →</a>
       </div>
       <div class="coach-visual fade-up d2">
-        <div class="coach-orb">🏀</div>
+        <div class="coach-orb">🏆</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── ACHIEVEMENTS & CERTIFICATIONS ─── -->
+<section id="achievements">
+  <div class="section-inner">
+    <div class="section-hd fade-up">
+      <span class="eyebrow">Credentials &amp; Recognition</span>
+      <h2>Achievements &amp; <span class="g">Certifications</span></h2>
+      <div class="section-divider"></div>
+      <p style="max-width:640px;margin:1.2rem auto 0;color:var(--gray);font-size:.92rem;line-height:1.7;">Beyond the classroom, Khem Kumari is a nationally and internationally trained coach and competition official in Table Tennis and Netball — recognized by ITTF, the Nepal Olympic Committee, Tribhuvan University, and Netball Australia, among others.</p>
+    </div>
+
+    <div class="achieve-stats-row fade-up">
+      <div class="achieve-stat"><span class="num" data-target="7">0</span><span class="lbl">Certifications</span></div>
+      <div class="achieve-stat"><span class="num" data-target="2">0</span><span class="lbl">Sports Coached</span></div>
+      <div class="achieve-stat"><span class="num" data-target="5">0</span><span class="lbl">Partner Organizations</span></div>
+      <div class="achieve-stat"><span class="num">2016–2017</span><span class="lbl">Years Active</span></div>
+    </div>
+
+    <div class="achieve-filter-row fade-up">
+      <button type="button" class="achieve-filter-btn active" data-filter="all">All (7)</button>
+      <button type="button" class="achieve-filter-btn" data-filter="tt">🏓 Table Tennis (4)</button>
+      <button type="button" class="achieve-filter-btn" data-filter="nb">🏐 Netball (3)</button>
+    </div>
+
+    <div class="achieve-grid">
+      <div class="achieve-card fade-up" data-cat="tt">
+        <div class="achieve-card-inner">
+          <div class="achieve-front">
+            <div class="achieve-icon-row"><span class="achieve-icon">🏓</span><span class="achieve-cat-badge">Table Tennis</span></div>
+            <div class="achieve-title">ITTF School Teacher Course</div>
+            <div class="achieve-org">Nepal Olympic Committee · ITTF · ANTTA · KDTTA</div>
+            <div class="achieve-date">23 October 2016</div>
+            <p class="achieve-short">Olympic Solidarity — Table Tennis Technical Course, School Teachers Course.</p>
+            <div class="achieve-hint">Tap to see details →</div>
+          </div>
+          <div class="achieve-back">
+            <h4>Full Details</h4>
+            <p>Completed the 6-hour ITTF School Teacher Course under the "Olympic Solidarity – Developing National Sports Instructor" program, conducted by ITTF Expert Arif Khan at the ANTTA Center, Kathmandu. Organized by the Nepal Table Tennis Association in collaboration with the International Table Tennis Federation and the Nepal Olympic Committee.</p>
+            <div class="achieve-hint">Tap to flip back</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="achieve-card fade-up d1" data-cat="tt">
+        <div class="achieve-card-inner">
+          <div class="achieve-front">
+            <div class="achieve-icon-row"><span class="achieve-icon">🏓</span><span class="achieve-cat-badge">Table Tennis</span></div>
+            <div class="achieve-title">Officiating Recognition</div>
+            <div class="achieve-org">Tribhuvan University, Faculty of Education</div>
+            <div class="achieve-date">Falgun 17 – Chaitra 24, 2072 B.S.</div>
+            <p class="achieve-short">Certificate of Appreciation for successful sports officiating.</p>
+            <div class="achieve-hint">Tap to see details →</div>
+          </div>
+          <div class="achieve-back">
+            <h4>Full Details</h4>
+            <p>Awarded a Certificate of Appreciation by Tribhuvan University's Central Department of Education for successfully officiating the Inter-Department Sports and Games Competition, held at the University Campus, Kirtipur, Kathmandu.</p>
+            <div class="achieve-hint">Tap to flip back</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="achieve-card fade-up d2" data-cat="tt">
+        <div class="achieve-card-inner">
+          <div class="achieve-front">
+            <div class="achieve-icon-row"><span class="achieve-icon">🏓</span><span class="achieve-cat-badge">Table Tennis</span></div>
+            <div class="achieve-title">OPS Inter-School Competition</div>
+            <div class="achieve-org">Organization of Private Schools (OPS)</div>
+            <div class="achieve-date">29 Jestha, 2073 B.S.</div>
+            <p class="achieve-short">Recognized for organizing the 2nd OPS inter-school Table Tennis competition.</p>
+            <div class="achieve-hint">Tap to see details →</div>
+          </div>
+          <div class="achieve-back">
+            <h4>Full Details</h4>
+            <p>Recognized by the Organization of Private Schools for outstanding contribution in holding the 2nd OPS Inter-School Open Table Tennis Competition, coordinated by Pushpa Kunja High School, Samakhusi.</p>
+            <div class="achieve-hint">Tap to flip back</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="achieve-card fade-up d3" data-cat="tt">
+        <div class="achieve-card-inner">
+          <div class="achieve-front">
+            <div class="achieve-icon-row"><span class="achieve-icon">🏓</span><span class="achieve-cat-badge">Table Tennis</span></div>
+            <div class="achieve-title">Competition Official</div>
+            <div class="achieve-org">Organization of Private Schools (OPS)</div>
+            <div class="achieve-date">14 Shrawan, 2074 B.S.</div>
+            <p class="achieve-short">Certified as an Official for a school-level Table Tennis competition.</p>
+            <div class="achieve-hint">Tap to see details →</div>
+          </div>
+          <div class="achieve-back">
+            <h4>Full Details</h4>
+            <p>Certified by the Organization of Private Schools for serving as an Official in a Table Tennis competition.</p>
+            <div class="achieve-hint">Tap to flip back</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="achieve-card fade-up" data-cat="nb">
+        <div class="achieve-card-inner">
+          <div class="achieve-front">
+            <div class="achieve-icon-row"><span class="achieve-icon">🏐</span><span class="achieve-cat-badge">Netball</span></div>
+            <div class="achieve-title">National Coaching &amp; Umpiring Workshop</div>
+            <div class="achieve-org">Nepal Netball Association</div>
+            <div class="achieve-date">3–8 April 2016</div>
+            <p class="achieve-short">Certificate of Completion — 18 training hours.</p>
+            <div class="achieve-hint">Tap to see details →</div>
+          </div>
+          <div class="achieve-back">
+            <h4>Full Details</h4>
+            <p>Successfully completed the 1st National Netball Coaching &amp; Umpiring Workshop 2016 in Kathmandu, organized by the Nepal Netball Association, completing 18 merit/attendance hours.</p>
+            <div class="achieve-hint">Tap to flip back</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="achieve-card fade-up d1" data-cat="nb">
+        <div class="achieve-card-inner">
+          <div class="achieve-front">
+            <div class="achieve-icon-row"><span class="achieve-icon">🏐</span><span class="achieve-cat-badge">Netball</span></div>
+            <div class="achieve-title">Introduction to Coaching Course</div>
+            <div class="achieve-org">One Netball Asia · Netball Australia</div>
+            <div class="achieve-date">12–16 July 2016</div>
+            <p class="achieve-short">Certificate of Participation.</p>
+            <div class="achieve-hint">Tap to see details →</div>
+          </div>
+          <div class="achieve-back">
+            <h4>Full Details</h4>
+            <p>Participated in the Introduction to Coaching Course presented by One Netball Asia, on behalf of Netball Australia and the Nepal Netball Association.</p>
+            <div class="achieve-hint">Tap to flip back</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="achieve-card fade-up d2" data-cat="nb">
+        <div class="achieve-card-inner">
+          <div class="achieve-front">
+            <div class="achieve-icon-row"><span class="achieve-icon">🏐</span><span class="achieve-cat-badge">Netball</span></div>
+            <div class="achieve-title">Leadership &amp; Child Protection Training</div>
+            <div class="achieve-org">One Netball Asia · Netball Australia</div>
+            <div class="achieve-date">23–25 August 2016</div>
+            <p class="achieve-short">Certificate of Training.</p>
+            <div class="achieve-hint">Tap to see details →</div>
+          </div>
+          <div class="achieve-back">
+            <h4>Full Details</h4>
+            <p>Completed training in Leadership, Child Protection, First Aid, Community Club Management, and Good Governance through One Netball Asia.</p>
+            <div class="achieve-hint">Tap to flip back</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -618,7 +834,7 @@ footer { position: relative; z-index: 1; background: rgba(0,0,0,.35); border-top
       <div class="why-card fade-up d3">
         <span class="why-icon">🤝</span>
         <h3>Growth Mindset</h3>
-        <p>Coaching experience brings the same encouragement and discipline from the court into the classroom.</p>
+        <p>Coaching and officiating experience in Table Tennis and Netball brings the same encouragement, discipline, and fair play into the classroom.</p>
       </div>
     </div>
   </div>
@@ -631,7 +847,7 @@ footer { position: relative; z-index: 1; background: rgba(0,0,0,.35); border-top
     <div class="contact-inner">
       <div class="contact-left fade-up">
         <h2>Ready to Start<br/><span class="g">Learning Together?</span></h2>
-        <p>Whether you're looking for online tutoring, in-person sessions, or basketball coaching for a student, reach out and let's find a schedule that works for you.</p>
+        <p>Whether you're looking for online tutoring, in-person sessions, or sports coaching for a student, reach out and let's find a schedule that works for you.</p>
         <div>
           <div class="contact-item">
             <div class="ci-icon">✉️</div>
@@ -661,7 +877,7 @@ footer { position: relative; z-index: 1; background: rgba(0,0,0,.35); border-top
             <option value="">Select an option...</option>
             <option>Online Tutoring</option>
             <option>In-Person Tutoring</option>
-            <option>Basketball Coaching</option>
+            <option>Sports Coaching (Table Tennis / Netball)</option>
             <option>General Inquiry</option>
           </select>
         </div>
@@ -690,7 +906,7 @@ footer { position: relative; z-index: 1; background: rgba(0,0,0,.35); border-top
         </svg>
         <div class="logo-text"><span class="brand" style="font-size:1.1rem;">Khem Kumari Dhungana</span></div>
       </div>
-      <p>Educator, Master's in Education, and basketball coach — offering online and in-person tutoring for students who want to learn, grow, and succeed.</p>
+      <p>Educator, Master's in Education, and certified Table Tennis &amp; Netball coach — offering online and in-person tutoring for students who want to learn, grow, and succeed.</p>
     </div>
     <div class="footer-col">
       <h4>Explore</h4>
@@ -698,6 +914,7 @@ footer { position: relative; z-index: 1; background: rgba(0,0,0,.35); border-top
         <li><a href="#about">About</a></li>
         <li><a href="#tutoring">Tutoring</a></li>
         <li><a href="#coaching">Coaching</a></li>
+        <li><a href="#achievements">Achievements</a></li>
         <li><a href="#why">Approach</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -896,7 +1113,49 @@ footer { position: relative; z-index: 1; background: rgba(0,0,0,.35); border-top
   document.getElementById('openPrivacy').addEventListener('click', function() { privacyModal.classList.add('open'); });
   document.getElementById('closePrivacy').addEventListener('click', function() { privacyModal.classList.remove('open'); });
   privacyModal.addEventListener('click', function(e) { if (e.target === privacyModal) privacyModal.classList.remove('open'); });
+
+  // ─── ACHIEVEMENTS: FILTER, FLIP CARDS, COUNT-UP STATS ───
+  var achieveFilterBtns = document.querySelectorAll('.achieve-filter-btn');
+  var achieveCards = document.querySelectorAll('.achieve-card');
+  achieveFilterBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      achieveFilterBtns.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var cat = btn.getAttribute('data-filter');
+      achieveCards.forEach(function(card) {
+        var show = (cat === 'all' || card.getAttribute('data-cat') === cat);
+        card.style.display = show ? '' : 'none';
+        if (!show) card.classList.remove('flipped');
+      });
+    });
+  });
+  achieveCards.forEach(function(card) {
+    card.addEventListener('click', function() { card.classList.toggle('flipped'); });
+  });
+
+  var statNums = document.querySelectorAll('.achieve-stat .num[data-target]');
+  var statObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (!entry.isIntersecting) return;
+      var el = entry.target;
+      if (el.dataset.counted) return;
+      el.dataset.counted = '1';
+      var target = parseInt(el.getAttribute('data-target'), 10);
+      var duration = 1100;
+      var startTime = null;
+      function step(ts) {
+        if (!startTime) startTime = ts;
+        var progress = Math.min((ts - startTime) / duration, 1);
+        el.textContent = Math.floor(progress * target);
+        if (progress < 1) requestAnimationFrame(step);
+        else el.textContent = target;
+      }
+      requestAnimationFrame(step);
+      statObserver.unobserve(el);
+    });
+  }, { threshold: .4 });
+  statNums.forEach(function(el) { statObserver.observe(el); });
 </script>
 
 </body>
-</h
+</html>
