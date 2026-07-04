@@ -172,7 +172,19 @@ h1 .accent { background: linear-gradient(90deg, var(--coral), var(--gold)); -web
 .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
 
 /* ── HERO VISUAL CARD ── */
-.hero-visual { position: relative; display: flex; align-items: center; justify-content: center; padding: 9rem 2rem 5rem; overflow: visible; }
+.hero-visual { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 9rem 2rem 5rem; overflow: visible; }
+.hero-photo-ring {
+  width: 190px; height: 190px; border-radius: 50%; flex-shrink: 0;
+  background: conic-gradient(from 180deg, var(--coral), var(--gold), var(--violet), var(--mint), var(--coral));
+  padding: 5px; margin-bottom: 1.8rem; position: relative; z-index: 2;
+  box-shadow: 0 20px 55px rgba(0,0,0,.5);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.hero-photo-ring:hover { transform: translateY(-4px) scale(1.02); box-shadow: 0 26px 65px rgba(0,0,0,.55), 0 0 30px rgba(255,77,141,.3); }
+.hero-photo {
+  width: 100%; height: 100%; border-radius: 50%; object-fit: cover; object-position: top center;
+  display: block; border: 4px solid var(--indigo3);
+}
 .hero-card-main {
   background: linear-gradient(145deg, rgba(30,22,64,.96), rgba(20,15,48,.98));
   border: 1px solid rgba(255,77,141,.22);
@@ -525,6 +537,9 @@ footer { position: relative; z-index: 1; background: rgba(0,0,0,.35); border-top
       </div>
     </div>
     <div class="hero-visual fade-up d2">
+      <div class="hero-photo-ring">
+        <img src="Khemkumari_Photo.jpg" alt="Khem Kumari Dhungana" class="hero-photo" />
+      </div>
       <div class="hero-card-main">
         <div class="card-header">
           <div class="card-icon">📘</div>
