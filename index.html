@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Khem Kumari Dhungana | Educator, M.Ed. &amp; Certified Sports Coach — Online &amp; In-Person Tutoring</title>
+<meta name="description" content="Khem Kumari Dhungana — school teacher (M.Ed.), certified Table Tennis &amp; Netball coach, and tutor offering online and in-person tutoring sessions." />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fraunces:wght@600;700;800&display=swap" rel="stylesheet" />
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --indigo:   #2B0B3F;
+  --indigo2:  #3D1257;
+  --indigo3:  #1A0729;
+  --coral:    #FF4D8D;
+  --coral2:   #FF7FAE;
+  --gold:     #FFD23F;
+  --violet:   #7B61FF;
+  --violet2:  #A897FF;
+  --mint:     #2EE6D6;
+  --white:    #ffffff;
+  --light:    #F3F1FF;
+  --gray:     #C6C1E8;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(165deg, var(--indigo3) 0%, var(--indigo) 45%, #241a55 100%);
+  color: var(--light);
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+
+a { color: inherit; }
+img { max-width: 100%; display: block; }
+h1, h2, h3, h4 { font-family: 'Fraunces', serif; line-height: 1.15; }
+
+.section-inner { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
+section { position: relative; z-index: 1; padding: 6rem 0; }
+
+/* ── AMBIENT ORBS + PARTICLE CANVAS ── */
+.orb { position: fixed; border-radius: 50%; filter: blur(90px); pointer-events: none; z-index: 0; }
+.orb1 { width: 620px; height: 620px; background: radial-gradient(circle, rgba(255,77,141,.14) 0%, transparent 70%); top: -220px; right: -200px; animation: orb-drift 16s ease-in-out infinite; }
+.orb2 { width: 520px; height: 520px; background: radial-gradient(circle, rgba(123,97,255,.14) 0%, transparent 70%); bottom: 15%; left: -180px; animation: orb-drift 21s ease-in-out infinite reverse; }
+.orb3 { width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,210,63,.10) 0%, transparent 70%); top: 45%; left: 45%; animation: orb-drift 24s ease-in-out infinite; }
+@keyframes orb-drift { 0%,100% { transform: translate(0,0); } 33% { transform: translate(30px,-30px); } 66% { transform: translate(-20px,20px); } }
+#bg-canvas { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+
+/* ── CLOCK BAR ── */
+#clock-bar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 101;
+  background: rgba(26,7,41,0.96);
+  border-bottom: 1px solid rgba(255,77,141,0.18);
+  text-align: center; padding: .42rem 0;
+}
+@keyframes neonFlicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% { color: #FFD23F; text-shadow: 0 0 4px rgba(255,210,63,.4), 0 0 10px rgba(255,210,63,.25); opacity: 1; }
+  20%, 24% { color: #FFD23F; text-shadow: none; opacity: .4; }
+  55% { color: #FF4D8D; text-shadow: 0 0 4px rgba(255,77,141,.35), 0 0 10px rgba(255,77,141,.2); opacity: .6; }
+}
+@keyframes flipIn {
+  0% { transform: perspective(300px) rotateX(-90deg); opacity: 0; }
+  60% { transform: perspective(300px) rotateX(10deg); opacity: 1; }
+  100% { transform: perspective(300px) rotateX(0deg); opacity: 1; }
+}
+#live-clock {
+  font-size: 1.2rem; font-weight: 700; letter-spacing: .1em;
+  font-family: 'Courier New', Consolas, monospace;
+  line-height: 1.3;
+  color: #FFD23F;
+  text-shadow: 0 0 4px rgba(255,210,63,.4), 0 0 10px rgba(255,210,63,.25);
+  animation: neonFlicker 6s infinite;
+  display: inline-block;
+  padding: .35rem 1.1rem;
+  background: rgba(255,210,63,0.07);
+  border: 2.5px solid rgba(255,210,63,0.55);
+  border-radius: 6px;
+  box-shadow: 0 0 14px rgba(255,210,63,0.22), inset 0 0 10px rgba(255,210,63,0.08);
+}
+#live-clock.flip { animation: neonFlicker 6s infinite, flipIn .35s ease-out; }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 58px; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 5%;
+  background: rgba(26,7,41,0.9);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255,77,141,0.15);
+  transition: background .3s;
+}
+.logo { display: flex; align-items: center; gap: .85rem; text-decoration: none; }
+.logo-mark { width: 64px; height: 64px; flex-shrink: 0; }
+.logo-text .brand { font-family: 'Fraunces', serif; font-size: 1.35rem; font-weight: 800; letter-spacing: .02em; color: var(--white); display: block; line-height: 1.1; }
+.logo-text .sub { font-size: .72rem; font-weight: 600; color: var(--coral2); letter-spacing: .1em; text-transform: uppercase; display: block; }
+
+nav ul { list-style: none; display: flex; gap: 1.9rem; align-items: center; }
+nav ul a {
+  text-decoration: none; color: var(--light); font-size: .87rem; font-weight: 500; letter-spacing: .02em;
+  display: inline-block;
+  transition: color .2s, transform .15s ease, filter .15s ease;
+}
+nav ul a:hover { color: var(--coral2); transform: scale(0.94) translateY(2px); filter: brightness(0.9); }
+nav ul a:active { transform: scale(0.9) translateY(3px); filter: brightness(0.75); }
+
+.nav-cta {
+  background: linear-gradient(135deg, var(--coral), var(--gold));
+  color: #2B0B3F !important;
+  padding: .55rem 1.3rem;
+  border-radius: 50px;
+  font-weight: 800 !important;
+  letter-spacing: .03em;
+  transition: opacity .2s, transform .2s ease, filter .2s ease, box-shadow .2s ease !important;
+}
+.nav-cta:hover { opacity: .96; transform: scale(0.94) translateY(3px); filter: brightness(0.86); box-shadow: inset 0 4px 12px rgba(0,0,0,0.32); }
+.nav-cta:active { transform: scale(0.9) translateY(4px); filter: brightness(0.7); }
+
+.menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; border-radius: 8px; transition: transform .15s ease, background .2s ease; }
+.menu-toggle span { width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: .3s; }
+.menu-toggle:hover { transform: scale(0.9); background: rgba(255,77,141,.14); }
+.menu-toggle:hover span { background: var(--coral2); }
+.menu-toggle:active { transform: scale(0.82); }
+.menu-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.menu-toggle.open span:nth-child(2) { opacity: 0; }
+.menu-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── HERO ── */
+.hero { position: relative; z-index: 1; min-height: 100vh; display: flex; align-items: center; padding: 14.5rem 5% 5rem; }
+.hero-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.05fr .95fr; gap: 3rem; align-items: center; width: 100%; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: .5rem;
+  background: rgba(255,77,141,.13); border: 1px solid rgba(255,77,141,.4);
+  color: var(--coral2); padding: .4rem 1rem; border-radius: 50px;
+  font-size: .78rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.hero-badge:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(255,77,141,.3); }
+h1 {
+  font-size: clamp(2.3rem, 4.3vw, 3.6rem);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 1.2rem;
+}
+h1 .accent { background: linear-gradient(90deg, var(--coral), var(--gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.hero-desc { color: var(--gray); font-size: 1.02rem; line-height: 1.75; max-width: 540px; margin-bottom: 2rem; }
+
+.btn-primary {
+  display: inline-flex; align-items: center; gap: .5rem;
+  background: linear-gradient(135deg, var(--coral), var(--gold));
+  color: #2B0B3F; padding: .9rem 2rem; border-radius: 50px;
+  font-weight: 800; font-size: .95rem; letter-spacing: .03em;
+  text-decoration: none; transition: all .3s;
+  box-shadow: 0 8px 32px rgba(255,77,141,.32);
+  border: none; cursor: pointer;
+}
+.btn-primary:hover { transform: scale(0.96) translateY(2px); box-shadow: inset 0 4px 12px rgba(0,0,0,0.3); filter: brightness(0.9); }
+.btn-primary:active { transform: scale(0.92) translateY(4px); filter: brightness(0.75); }
+
+.btn-outline {
+  display: inline-flex; align-items: center; gap: .5rem;
+  border: 1.5px solid rgba(123,97,255,.55); color: #ffffff;
+  padding: .9rem 2rem; border-radius: 50px; font-weight: 600; font-size: .95rem;
+  text-decoration: none; transition: all .3s; background: rgba(255,255,255,.05);
+}
+.btn-outline:hover { background: rgba(123,97,255,.14); transform: scale(0.96) translateY(2px); box-shadow: inset 0 4px 12px rgba(0,0,0,0.28); filter: brightness(0.92); }
+.btn-outline:active { transform: scale(0.92) translateY(4px); filter: brightness(0.78); }
+
+.hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+/* ── HERO VISUAL CARD ── */
+.hero-visual { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 9rem 2rem 5rem; overflow: visible; }
+.hero-photo-ring {
+  width: 190px; height: 190px; border-radius: 50%; flex-shrink: 0;
+  background: conic-gradient(from 180deg, var(--coral), var(--gold), var(--violet), var(--mint), var(--coral));
+  padding: 5px; margin-bottom: 1.8rem; position: relative; z-index: 2;
+  box-shadow: 0 20px 55px rgba(0,0,0,.5);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.hero-photo-ring:hover { transform: translateY(-4px) scale(1.02); box-shadow: 0 26px 65px rgba(0,0,0,.55), 0 0 30px rgba(255,77,141,.3); }
+.hero-photo {
+  width: 100%; height: 100%; border-radius: 50%; object-fit: cover; object-position: top center;
+  display: block; border: 4px solid var(--indigo3);
+}
+.hero-card-main {
+  background: linear-gradient(145deg, rgba(30,22,64,.96), rgba(20,15,48,.98));
+  border: 1px solid rgba(255,77,141,.22);
+  border-radius: 24px; padding: 2.5rem; width: 100%; max-width: 420px;
+  backdrop-filter: blur(20px); box-shadow: 0 40px 80px rgba(0,0,0,.5);
+  position: relative; z-index: 2;
+}
+.card-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; padding-bottom: 1.2rem; border-bottom: 1px solid rgba(255,255,255,.08); }
+.card-icon { width: 48px; height: 48px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; background: linear-gradient(135deg, rgba(255,77,141,.22), rgba(255,77,141,.05)); border: 1px solid rgba(255,77,141,.32); }
+.card-title { font-weight: 700; font-size: .98rem; font-family: 'Inter', sans-serif; }
+.card-sub { color: var(--gray); font-size: .78rem; margin-top: .1rem; }
+.badge-row { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: 1.3rem; }
+.mini-badge {
+  background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1);
+  border-radius: 10px; padding: .55rem .5rem; text-align: center; font-size: .68rem;
+  color: var(--gray); font-weight: 600; flex: 1 1 auto; min-width: 92px;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.mini-badge span { display: block; font-size: 1rem; margin-bottom: .25rem; }
+.mini-badge:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,.35); border-color: rgba(255,77,141,.4); }
+.hero-card-list { list-style: none; display: flex; flex-direction: column; gap: .75rem; }
+.hero-card-list li { display: flex; align-items: center; gap: .6rem; font-size: .84rem; color: var(--light); }
+.hero-card-list li span.tick { color: var(--mint); font-weight: 800; }
+
+.floating-badge {
+  position: absolute; background: linear-gradient(135deg, var(--gold), var(--coral));
+  color: #2B0B3F; border-radius: 50px; padding: .6rem 1.3rem; font-size: .8rem; font-weight: 700;
+  box-shadow: 0 8px 24px rgba(255,168,69,.45); animation: float 3s ease-in-out infinite;
+  z-index: 20; white-space: nowrap;
+}
+.floating-badge.b1 { top: 6rem; right: 1.5rem; animation-delay: 0s; }
+.floating-badge.b2 { bottom: 1.2rem; left: -1rem; animation-delay: 1.5s; }
+@keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+
+@media (max-width: 1024px) { .hero-inner { grid-template-columns: 1fr; } .hero-visual { margin-top: 2rem; } }
+
+/* ── SECTION HEADERS ── */
+.section-hd { text-align: center; margin-bottom: 3rem; }
+.eyebrow { display: inline-block; font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--coral2); margin-bottom: .7rem; }
+.section-hd h2 { font-size: clamp(1.9rem, 3.4vw, 2.7rem); color: var(--white); }
+.section-hd h2 .g { background: linear-gradient(90deg, var(--coral), var(--gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.section-divider { width: 60px; height: 3px; background: linear-gradient(90deg, var(--coral), var(--gold)); border-radius: 2px; margin: 1rem auto 0; }
+
+/* ── ABOUT / EDUCATION TIMELINE ── */
+#about { background: rgba(0,0,0,.14); }
+.edu-timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+.edu-card {
+  background: linear-gradient(145deg, rgba(30,22,64,.9), rgba(20,15,48,.94));
+  border: 1px solid rgba(255,255,255,.08); border-radius: 20px; padding: 1.8rem 1.5rem;
+  transition: all .35s; position: relative; overflow: hidden;
+}
+.edu-card::before { content:''; position:absolute; top:0; left:0; right:0; height:4px; }
+.edu-card:nth-child(4n+1)::before { background: linear-gradient(90deg, var(--coral), var(--gold)); }
+.edu-card:nth-child(4n+2)::before { background: linear-gradient(90deg, var(--violet), var(--mint)); }
+.edu-card:nth-child(4n+3)::before { background: linear-gradient(90deg, var(--gold), var(--violet)); }
+.edu-card:nth-child(4n+4)::before { background: linear-gradient(90deg, var(--mint), var(--coral)); }
+.edu-card:hover { transform: translateY(-8px); border-color: rgba(255,77,141,.3); box-shadow: 0 24px 55px rgba(0,0,0,.4); }
+.edu-step { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: linear-gradient(135deg, var(--coral), var(--gold)); color: #2B0B3F; font-weight: 800; font-size: .85rem; margin-bottom: 1rem; }
+.edu-card h4 { font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: .4rem; font-family: 'Inter', sans-serif; }
+.edu-card p { font-size: .82rem; color: var(--gray); line-height: 1.6; }
+.edu-note { text-align: center; margin-top: 2rem; color: var(--gray); font-size: .82rem; font-style: italic; }
+@media (max-width: 900px) { .edu-timeline { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .edu-timeline { grid-template-columns: 1fr; } }
+
+/* ── TUTORING ── */
+.tutor-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.tutor-card {
+  background: linear-gradient(160deg, rgba(30,22,64,.92), rgba(26,7,41,.96));
+  border: 1px solid rgba(255,255,255,.08); border-radius: 24px; padding: 2.4rem;
+  transition: all .35s; position: relative; overflow: hidden;
+}
+.tutor-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; border-radius:20px 20px 0 0; opacity:0; transition:opacity .35s; }
+.tutor-card:hover { transform: translateY(-8px); border-color: rgba(255,77,141,.28); box-shadow: 0 24px 60px rgba(0,0,0,.4); }
+.tutor-card:hover::before { opacity: 1; }
+.tutor-card.online::before { background: linear-gradient(90deg, var(--coral), var(--gold)); }
+.tutor-card.person::before { background: linear-gradient(90deg, var(--violet), var(--coral2)); }
+.tutor-icon { width: 58px; height: 58px; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 1.7rem; margin-bottom: 1.3rem; }
+.tutor-card.online .tutor-icon { background: linear-gradient(135deg, rgba(255,77,141,.22), rgba(255,210,63,.1)); border: 1px solid rgba(255,77,141,.32); }
+.tutor-card.person .tutor-icon { background: linear-gradient(135deg, rgba(123,97,255,.22), rgba(123,97,255,.06)); border: 1px solid rgba(123,97,255,.32); }
+.tutor-card h3 { font-size: 1.25rem; color: var(--white); margin-bottom: .6rem; }
+.tutor-card p.desc { color: var(--gray); font-size: .9rem; line-height: 1.7; margin-bottom: 1.2rem; }
+.tutor-list { list-style: none; display: flex; flex-direction: column; gap: .55rem; margin-bottom: 1.5rem; }
+.tutor-list li { font-size: .86rem; color: var(--light); display: flex; align-items: center; gap: .55rem; }
+.tutor-list li span.tick { color: var(--mint); font-weight: 800; }
+.teams-note { font-size: .78rem; color: var(--gray); font-style: italic; margin-top: .9rem; }
+.meet-btn-row { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: .9rem; }
+.meet-btn { flex: 1 1 auto; text-align: center; background: rgba(255,255,255,.06); border: 1.5px solid rgba(255,255,255,.16); color: var(--white); padding: .65rem .9rem; border-radius: 12px; font-size: .8rem; font-weight: 700; text-decoration: none; transition: transform .15s ease, filter .15s ease, box-shadow .15s ease, background .2s, border-color .2s; }
+.meet-btn:hover { transform: scale(0.95) translateY(2px); filter: brightness(0.88); box-shadow: inset 0 3px 8px rgba(0,0,0,0.28); background: rgba(255,255,255,.1); border-color: rgba(255,77,141,.4); }
+.meet-btn:active { transform: scale(0.9) translateY(3px); filter: brightness(0.75); }
+@media (max-width: 860px) { .tutor-grid { grid-template-columns: 1fr; } }
+
+/* ── COACHING ── */
+#coaching { background: rgba(0,0,0,.14); }
+.coach-wrap { display: grid; grid-template-columns: .95fr 1.05fr; gap: 3rem; align-items: center; }
+.coach-panel {
+  background: linear-gradient(160deg, rgba(30,22,64,.92), rgba(26,7,41,.96));
+  border: 1px solid rgba(123,97,255,.2); border-radius: 24px; padding: 2.4rem;
+}
+.coach-panel h3 { font-size: 1.5rem; color: var(--white); margin-bottom: 1rem; }
+.coach-panel p { color: var(--gray); font-size: .95rem; line-height: 1.75; margin-bottom: 1.4rem; }
+.coach-tags { display: flex; flex-wrap: wrap; gap: .6rem; }
+.coach-tag {
+  background: rgba(123,97,255,.13); border: 1px solid rgba(123,97,255,.32); color: var(--violet2);
+  padding: .45rem 1rem; border-radius: 50px; font-size: .78rem; font-weight: 700; letter-spacing: .03em;
+  transition: transform .2s ease, filter .2s ease, box-shadow .2s ease;
+}
+.coach-tag:hover { transform: translateY(-2px) scale(1.04); filter: brightness(1.15); box-shadow: 0 6px 18px rgba(123,97,255,.35); }
+.coach-visual { display: flex; align-items: center; justify-content: center; }
+.coach-orb {
+  width: 280px; height: 280px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, rgba(255,210,63,.35), rgba(255,77,141,.18) 55%, rgba(123,97,255,.12) 100%);
+  border: 2px solid rgba(255,210,63,.35);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 5.5rem; box-shadow: 0 0 60px rgba(255,77,141,.3), inset 0 0 40px rgba(255,210,63,.15);
+  animation: coachPulse 4s ease-in-out infinite;
+}
+@keyframes coachPulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.035); } }
+@media (max-width: 900px) { .coach-wrap { grid-template-columns: 1fr; } .coach-visual { order: -1; } .coach-orb { width: 200px; height: 200px; font-size: 4rem; } }
+
+/* ── ACHIEVEMENTS / CERTIFICATIONS ── */
+#achievements { background: rgba(0,0,0,.10); }
+.achieve-stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin-bottom: 3rem; }
+.achieve-stat {
+  background: linear-gradient(145deg, rgba(30,22,64,.9), rgba(20,15,48,.94));
+  border: 1px solid rgba(255,255,255,.08); border-radius: 18px; padding: 1.6rem 1rem; text-align: center;
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+.achieve-stat:hover { transform: translateY(-6px); border-color: rgba(255,210,63,.35); box-shadow: 0 18px 40px rgba(0,0,0,.35); }
+.achieve-stat .num {
+  font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 800;
+  background: linear-gradient(90deg, var(--coral), var(--gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  display: block; line-height: 1.1; margin-bottom: .4rem;
+}
+.achieve-stat .lbl { font-size: .73rem; color: var(--gray); letter-spacing: .04em; text-transform: uppercase; font-weight: 600; }
+@media (max-width: 860px) { .achieve-stats-row { grid-template-columns: repeat(2, 1fr); } }
+
+.achieve-filter-row { display: flex; justify-content: center; flex-wrap: wrap; gap: .7rem; margin-bottom: 2.6rem; }
+.achieve-filter-btn {
+  background: rgba(255,255,255,.05); border: 1.5px solid rgba(255,255,255,.14); color: var(--light);
+  padding: .55rem 1.3rem; border-radius: 50px; font-size: .82rem; font-weight: 700; letter-spacing: .02em;
+  cursor: pointer; font-family: 'Inter', sans-serif;
+  transition: transform .15s ease, filter .15s ease, box-shadow .15s ease, background .25s, border-color .25s;
+}
+.achieve-filter-btn:hover { transform: scale(0.96) translateY(2px); filter: brightness(0.92); }
+.achieve-filter-btn:active { transform: scale(0.92) translateY(3px); filter: brightness(0.8); }
+.achieve-filter-btn.active { background: linear-gradient(135deg, var(--coral), var(--gold)); color: #2B0B3F; border-color: transparent; box-shadow: 0 8px 22px rgba(255,77,141,.32); }
+
+.achieve-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.8rem; }
+@media (max-width: 1024px) { .achieve-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .achieve-grid { grid-template-columns: 1fr; } }
+
+.achieve-card { height: 300px; cursor: pointer; position: relative; }
+.achieve-card-inner { position: relative; width: 100%; height: 100%; }
+.achieve-card:hover .achieve-front { filter: brightness(1.05); }
+.achieve-front, .achieve-back {
+  position: absolute; inset: 0; border-radius: 20px; padding: 1.6rem;
+  display: flex; flex-direction: column; border: 1px solid rgba(255,255,255,.09);
+  box-shadow: 0 20px 50px rgba(0,0,0,.35);
+  transition: opacity .35s ease, transform .35s ease;
+}
+.achieve-front { background: linear-gradient(150deg, rgba(30,22,64,.94), rgba(20,15,48,.97)); opacity: 1; transform: scale(1); z-index: 2; }
+.achieve-back { background: linear-gradient(150deg, rgba(45,20,70,.97), rgba(20,15,48,.98)); overflow-y: auto; opacity: 0; transform: scale(.96); pointer-events: none; z-index: 1; }
+.achieve-card.flipped .achieve-front { opacity: 0; transform: scale(1.04); pointer-events: none; z-index: 1; }
+.achieve-card.flipped .achieve-back { opacity: 1; transform: scale(1); pointer-events: auto; z-index: 2; }
+.achieve-card[data-cat="tt"] .achieve-front { border-top: 4px solid; border-image: linear-gradient(90deg, var(--coral), var(--gold)) 1; }
+.achieve-card[data-cat="nb"] .achieve-front { border-top: 4px solid; border-image: linear-gradient(90deg, var(--violet), var(--mint)) 1; }
+.achieve-icon-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
+.achieve-icon { font-size: 2rem; }
+.achieve-cat-badge { font-size: .64rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; padding: .3rem .7rem; border-radius: 50px; }
+.achieve-card[data-cat="tt"] .achieve-cat-badge { background: rgba(255,77,141,.16); color: var(--coral2); border: 1px solid rgba(255,77,141,.35); }
+.achieve-card[data-cat="nb"] .achieve-cat-badge { background: rgba(123,97,255,.16); color: var(--violet2); border: 1px solid rgba(123,97,255,.4); }
+.achieve-title { font-size: 1rem; font-weight: 700; color: var(--white); font-family: 'Inter', sans-serif; margin-bottom: .5rem; line-height: 1.35; }
+.achieve-org { font-size: .77rem; color: var(--gray); margin-bottom: .35rem; }
+.achieve-date { font-size: .73rem; color: var(--mint); font-weight: 700; margin-bottom: .8rem; }
+.achieve-short { font-size: .79rem; color: var(--gray); line-height: 1.55; flex: 1; }
+.achieve-hint { font-size: .68rem; color: var(--gray); font-style: italic; margin-top: auto; opacity: .75; padding-top: .6rem; }
+.achieve-back h4 { font-size: .88rem; color: var(--gold); margin-bottom: .6rem; font-family: 'Inter', sans-serif; }
+.achieve-back p { font-size: .79rem; color: var(--light); line-height: 1.65; flex: 1; }
+
+/* ── WHY / PHILOSOPHY ── */
+.why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+.why-card {
+  background: linear-gradient(145deg, rgba(30,22,64,.93), rgba(20,15,48,.96));
+  border: 1px solid rgba(255,255,255,.07); border-radius: 20px; padding: 2rem 1.5rem;
+  text-align: center; transition: all .35s; position: relative; overflow: hidden;
+}
+.why-card::before { content:''; position:absolute; top:0; left:0; right:0; height:4px; }
+.why-card:nth-child(4n+1)::before { background: linear-gradient(90deg, var(--mint), var(--violet)); }
+.why-card:nth-child(4n+2)::before { background: linear-gradient(90deg, var(--coral), var(--gold)); }
+.why-card:nth-child(4n+3)::before { background: linear-gradient(90deg, var(--violet), var(--coral)); }
+.why-card:nth-child(4n+4)::before { background: linear-gradient(90deg, var(--gold), var(--mint)); }
+.why-card:hover { transform: translateY(-6px); border-color: rgba(255,77,141,.22); box-shadow: 0 20px 50px rgba(0,0,0,.4); }
+.why-icon { font-size: 2.1rem; margin-bottom: 1rem; display: block; }
+.why-card h3 { font-size: .96rem; font-weight: 700; color: var(--white); margin-bottom: .6rem; font-family: 'Inter', sans-serif; }
+.why-card p { color: var(--gray); font-size: .8rem; line-height: 1.65; }
+@media (max-width: 1024px) { .why-grid { grid-template-columns: repeat(2, 1fr); } }
+
+/* ── CONTACT ── */
+.contact-section { background: radial-gradient(circle at 15% 5%, rgba(255,210,63,.1), transparent 32%), linear-gradient(135deg, #2B0B3F 0%, #241a55 50%, #150e33 100%); }
+.contact-inner { display: grid; grid-template-columns: .85fr 1.15fr; gap: 3rem; max-width: 1200px; margin: 0 auto; }
+.contact-left h2 { margin-bottom: 1.2rem; color: var(--white); }
+.contact-left p { color: var(--gray); line-height: 1.75; margin-bottom: 2rem; }
+.contact-item { display: flex; align-items: center; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,.07); }
+.contact-item:last-child { border-bottom: none; }
+.ci-icon { width: 42px; height: 42px; border-radius: 12px; background: rgba(255,77,141,.13); border: 1px solid rgba(255,77,141,.28); display: flex; align-items: center; justify-content: center; font-size: 1.15rem; flex-shrink: 0; }
+.ci-label { font-size: .73rem; color: var(--gray); text-transform: uppercase; letter-spacing: .06em; }
+.ci-val { font-size: .92rem; font-weight: 600; color: var(--coral2); }
+.contact-form { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.09); border-radius: 24px; padding: 2.2rem; backdrop-filter: blur(10px); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.form-group { margin-bottom: 1.2rem; }
+.form-group label { display: block; font-size: .8rem; font-weight: 600; color: var(--light); margin-bottom: .5rem; letter-spacing: .03em; }
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: 10px;
+  padding: .75rem 1rem; color: var(--white); font-family: 'Inter', sans-serif; font-size: .88rem; transition: border-color .2s, background .2s;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: rgba(255,77,141,.55); background: rgba(255,255,255,.09); }
+.form-group select option { background: #2B0B3F; }
+.form-group textarea { height: 110px; resize: vertical; }
+
+.btn-submit {
+  width: 100%; background: linear-gradient(135deg, var(--coral), var(--gold)); color: #2B0B3F;
+  border: none; padding: 1rem; border-radius: 50px; font-weight: 800; font-size: .95rem;
+  cursor: pointer; transition: all .3s; box-shadow: 0 8px 32px rgba(255,77,141,.3); font-family: 'Inter', sans-serif;
+}
+.btn-submit:hover { transform: scale(0.97) translateY(3px); box-shadow: inset 0 4px 12px rgba(0,0,0,0.35); filter: brightness(0.88); }
+.btn-submit:active { transform: scale(0.94) translateY(5px); filter: brightness(0.75); }
+@media (max-width: 900px) { .contact-inner { grid-template-columns: 1fr; } .form-row { grid-template-columns: 1fr; } }
+
+/* ── EMAIL / TEAMS PRESS BUTTONS ── */
+.email-press-btn { display: inline-block; transition: transform .15s ease, filter .15s ease, box-shadow .15s ease !important; }
+.email-press-btn:hover { transform: scale(0.93) translateY(3px) !important; filter: brightness(0.82); box-shadow: inset 0 4px 12px rgba(0,0,0,0.42) !important; }
+.email-press-btn:active { transform: scale(0.89) translateY(4px) !important; filter: brightness(0.7); }
+
+/* ── FOOTER ── */
+footer { position: relative; z-index: 1; background: rgba(0,0,0,.35); border-top: 1px solid rgba(255,255,255,.06); padding: 3rem 5% 2rem; }
+.footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,.06); margin-bottom: 1.5rem; }
+.footer-brand p { color: var(--gray); font-size: .85rem; line-height: 1.7; margin-top: 1rem; max-width: 300px; }
+.footer-col h4 { font-size: .85rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--light); margin-bottom: 1rem; font-family: 'Inter', sans-serif; }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: .6rem; }
+.footer-col a { color: var(--gray); text-decoration: none; font-size: .84rem; transition: color .2s; }
+.footer-col a:hover { color: var(--coral2); }
+.footer-bottom { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; color: var(--gray); font-size: .78rem; flex-wrap: wrap; gap: .6rem; }
+.footer-bottom span.heart { color: #ff4d6d; font-size: 1.2em; vertical-align: middle; }
+.footer-privacy-link { background: none; border: none; color: var(--gray); font-size: .78rem; cursor: pointer; text-decoration: underline; font-family: 'Inter', sans-serif; transition: color .2s; }
+.footer-privacy-link:hover { color: var(--coral2); }
+
+/* ── PRIVACY MODAL ── */
+#privacy-modal { position: fixed; inset: 0; background: rgba(5,3,20,.78); backdrop-filter: blur(6px); z-index: 500; display: none; align-items: center; justify-content: center; padding: 2rem; }
+#privacy-modal.open { display: flex; }
+.privacy-box { max-width: 560px; max-height: 80vh; overflow-y: auto; background: linear-gradient(160deg, rgba(30,22,64,.98), rgba(26,7,41,.99)); border: 1px solid rgba(255,77,141,.25); border-radius: 20px; padding: 2.2rem; box-shadow: 0 40px 90px rgba(0,0,0,.6); }
+.privacy-box h3 { color: var(--white); margin-bottom: 1rem; font-size: 1.3rem; }
+.privacy-box p { color: var(--gray); font-size: .86rem; line-height: 1.75; margin-bottom: .9rem; }
+.privacy-close { margin-top: .5rem; background: linear-gradient(135deg, var(--coral), var(--gold)); color: #2B0B3F; border: none; padding: .65rem 1.5rem; border-radius: 50px; font-weight: 700; font-size: .85rem; cursor: pointer; transition: transform .15s ease, filter .15s ease, box-shadow .15s ease; }
+.privacy-close:hover { transform: scale(0.95) translateY(2px); filter: brightness(0.88); box-shadow: inset 0 3px 10px rgba(0,0,0,.3); }
+
+/* ── SCROLL TO TOP ── */
+#scroll-top {
+  position: fixed; bottom: 6.5rem; right: 1.4rem; z-index: 999;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--coral), var(--gold));
+  color: #2B0B3F; border: none; cursor: pointer; font-size: 1.2rem;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none; transition: opacity .3s, transform .3s;
+  box-shadow: 0 4px 14px rgba(255,77,141,.4);
+}
+#scroll-top.visible { opacity: 1; pointer-events: auto; }
+#scroll-top:hover { transform: scale(0.94) translateY(3px); box-shadow: inset 0 4px 10px rgba(0,0,0,.32); filter: brightness(0.9); }
+#scroll-top:active { transform: scale(0.88) translateY(4px); filter: brightness(0.75); }
+
+/* ── FADE UP REVEAL ── */
+.fade-up { opacity: 0; transform: translateY(40px); transition: opacity .7s ease, transform .7s ease; }
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+.fade-up.d1 { transition-delay: .1s; } .fade-up.d2 { transition-delay: .2s; } .fade-up.d3 { transition-delay: .3s; } .fade-up.d4 { transition-delay: .4s; }
+
+/* ── RESPONSIVE NAV ── */
+@media (max-width: 860px) {
+  nav ul, .nav-cta { display: none; }
+  nav ul.mobile-open { display: flex; flex-direction: column; position: fixed; top: 118px; left: 0; right: 0; background: rgba(26,7,41,.98); padding: 1.5rem 8%; gap: 1.2rem; border-bottom: 1px solid rgba(255,77,141,.2); }
+  .menu-toggle { display: flex; }
+}
+</style>
+</head>
+<body>
+
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="orb orb3"></div>
+<canvas id="bg-canvas"></canvas>
+
+<!-- ─── CLOCK + NAV ─── -->
+<div id="clock-bar"><span id="live-clock"></span></div>
+<nav id="navbar">
+  <a href="#home" class="logo">
+    <svg class="logo-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#FF4D8D"/>
+          <stop offset="55%" stop-color="#FFD23F"/>
+          <stop offset="100%" stop-color="#7B61FF"/>
+        </linearGradient>
+        <radialGradient id="coreGrad" cx="50%" cy="45%" r="60%">
+          <stop offset="0%" stop-color="#3D1257"/>
+          <stop offset="100%" stop-color="#1A0729"/>
+        </radialGradient>
+      </defs>
+      <circle cx="50" cy="50" r="46" fill="url(#coreGrad)" stroke="url(#ringGrad)" stroke-width="2.5"/>
+      <circle cx="50" cy="50" r="40" fill="none" stroke="url(#ringGrad)" stroke-width="1.4" stroke-dasharray="4 5" opacity=".8">
+        <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="14s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="50" cy="50" r="44" fill="none" stroke="#FFD23F" stroke-width=".8" opacity=".5">
+        <animate attributeName="r" values="44;47;44" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values=".5;.05;.5" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <text x="50" y="60" text-anchor="middle" font-family="Fraunces, serif" font-size="34" font-weight="800" fill="#ffffff">KD</text>
+      <g opacity=".9">
+        <circle cx="78" cy="24" r="7" fill="#FF4D8D"/>
+        <path d="M78 17.5 V30.5 M71.5 24 H84.5 M73.2 19 Q78 24 73.2 29 M82.8 19 Q78 24 82.8 29" stroke="#2B0B3F" stroke-width="1" fill="none"/>
+      </g>
+    </svg>
+    <div class="logo-text">
+      <span class="brand">Khem Kumari Dhungana</span>
+      <span class="sub">Educator · Tutor · Coach</span>
+    </div>
+  </a>
+  <ul id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#tutoring">Tutoring</a></li>
+    <li><a href="#coaching">Coaching</a></li>
+    <li><a href="#achievements">Achievements</a></li>
+    <li><a href="#why">Approach</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact" class="nav-cta">Book a Session</a></li>
+  </ul>
+  <div class="menu-toggle" id="menuToggle">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-content fade-up">
+      <div class="hero-badge">🎓 Educator &amp; Certified Sports Coach</div>
+      <h1>Helping Students <span class="accent">Grow, Learn</span><br/>&amp; Reach Their Potential</h1>
+      <p class="hero-desc">Khem Kumari Dhungana is a school teacher with a Master's degree in Education, currently teaching at Shramsheel Vidyapith - Nepal. She is also a certified Table Tennis and Netball coach and offers patient, personalized tutoring — online and in person — for students who want to build confidence and truly understand their subjects.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">📅 Book a Tutoring Session</a>
+        <a href="#achievements" class="btn-outline">🏆 View Achievements →</a>
+      </div>
+    </div>
+    <div class="hero-visual fade-up d2">
+      <div class="hero-photo-ring">
+        <img src="Khemkumari_Photo.jpg" alt="Khem Kumari Dhungana" class="hero-photo" />
+      </div>
+      <div class="hero-card-main">
+        <div class="card-header">
+          <div class="card-icon">📘</div>
+          <div>
+            <div class="card-title">Teaching &amp; Tutoring Profile</div>
+            <div class="card-sub">Shramsheel Vidyapith - Nepal</div>
+          </div>
+        </div>
+        <div class="badge-row">
+          <div class="mini-badge"><span>🎓</span>M.Ed. Graduate</div>
+          <div class="mini-badge"><span>🏆</span>Certified Coach</div>
+          <div class="mini-badge"><span>💻</span>Online &amp; In-Person</div>
+        </div>
+        <ul class="hero-card-list">
+          <li><span class="tick">✓</span> Bachelor's &amp; Master's in Education</li>
+          <li><span class="tick">✓</span> Patient, student-centered teaching style</li>
+          <li><span class="tick">✓</span> Microsoft Teams, Google Meet &amp; Zoom sessions available</li>
+          <li><span class="tick">✓</span> Certified coach &amp; official — Table Tennis &amp; Netball</li>
+        </ul>
+      </div>
+      <div class="floating-badge b1">✅ Now Accepting Students</div>
+      <div class="floating-badge b2">🏆 7 Certifications Earned</div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── ABOUT / EDUCATION ─── -->
+<section id="about">
+  <div class="section-inner">
+    <div class="section-hd fade-up">
+      <span class="eyebrow">About Khem Kumari</span>
+      <h2>Education &amp; <span class="g">Teaching Journey</span></h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="edu-timeline">
+      <div class="edu-card fade-up">
+        <div class="edu-step">1</div>
+        <h4>10+2 (Higher Secondary)</h4>
+        <p>Completed her intermediate-level education (10+2) in Nepal, building the foundation for her academic career.</p>
+      </div>
+      <div class="edu-card fade-up d1">
+        <div class="edu-step">2</div>
+        <h4>Bachelor's in Education</h4>
+        <p>Earned a Bachelor's degree in Education, training in teaching methods, curriculum, and classroom instruction.</p>
+      </div>
+      <div class="edu-card fade-up d2">
+        <div class="edu-step">3</div>
+        <h4>Master's in Education</h4>
+        <p>Completed a Master's degree in Education (M.Ed.), deepening her expertise in pedagogy and student learning.</p>
+      </div>
+      <div class="edu-card fade-up d3">
+        <div class="edu-step">4</div>
+        <h4>Teaching Today</h4>
+        <p>Currently teaching at Shramsheel Vidyapith - Nepal, and coaching Table Tennis &amp; Netball alongside her classroom work.</p>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<!-- ─── TUTORING ─── -->
+<section id="tutoring">
+  <div class="section-inner">
+    <div class="section-hd fade-up">
+      <span class="eyebrow">Tutoring Services</span>
+      <h2>Learn <span class="g">Online or In Person</span></h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="tutor-grid">
+      <div class="tutor-card online fade-up">
+        <div class="tutor-icon">💻</div>
+        <h3>Online Tutoring</h3>
+        <p class="desc">Join a live tutoring session from anywhere — no travel needed, just a computer or phone and an internet connection. Choose whichever video call platform works best for you.</p>
+        <ul class="tutor-list">
+          <li><span class="tick">✓</span> One-on-one or small group sessions</li>
+          <li><span class="tick">✓</span> Flexible scheduling</li>
+          <li><span class="tick">✓</span> Screen-sharing &amp; interactive whiteboard</li>
+        </ul>
+        <div class="meet-btn-row">
+          <a href="#" id="teamsBtn" class="meet-btn">🟦 Microsoft Teams</a>
+          <a href="#" id="meetBtn" class="meet-btn">🟢 Google Meet</a>
+          <a href="#" id="zoomBtn" class="meet-btn">🔷 Zoom</a>
+        </div>
+        <p class="teams-note">Meeting links coming soon — email or use the contact form below to schedule your online session in the meantime.</p>
+      </div>
+      <div class="tutor-card person fade-up d1">
+        <div class="tutor-icon">🧑‍🏫</div>
+        <h3>In-Person Tutoring</h3>
+        <p class="desc">Prefer face-to-face learning? Khem Kumari also offers in-person tutoring sessions for students who learn best with hands-on guidance.</p>
+        <ul class="tutor-list">
+          <li><span class="tick">✓</span> Personalized, hands-on instruction</li>
+          <li><span class="tick">✓</span> Homework &amp; exam preparation support</li>
+          <li><span class="tick">✓</span> Location &amp; times arranged directly</li>
+        </ul>
+        <a href="#contact" class="btn-outline">📍 Request In-Person Tutoring →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── COACHING ─── -->
+<section id="coaching">
+  <div class="section-inner">
+    <div class="section-hd fade-up">
+      <span class="eyebrow">Beyond the Classroom</span>
+      <h2>Coaching <span class="g">&amp; Officiating</span></h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="coach-wrap">
+      <div class="coach-panel fade-up">
+        <h3>🏆 Coaching &amp; Officiating Student Athletes</h3>
+        <p>In addition to teaching, Khem Kumari is a nationally and internationally trained coach and competition official in Table Tennis and Netball, helping students build teamwork, discipline, and confidence both on and off the court. She believes sports and academics go hand in hand — the same focus and resilience that make a great student also make a great teammate.</p>
+        <div class="coach-tags">
+          <span class="coach-tag">🏓 Table Tennis</span>
+          <span class="coach-tag">🏐 Netball</span>
+          <span class="coach-tag">Teamwork</span>
+          <span class="coach-tag">Discipline</span>
+          <span class="coach-tag">Leadership</span>
+          <span class="coach-tag">Confidence Building</span>
+        </div>
+        <a href="#achievements" class="btn-outline" style="margin-top:1.5rem;">🏆 View All Certifications →</a>
+      </div>
+      <div class="coach-visual fade-up d2">
+        <div class="coach-orb">🏆</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── ACHIEVEMENTS & CERTIFICATIONS ─── -->
+<section id="achievements">
+  <div class="section-inner">
+    <div class="section-hd fade-up">
+      <span class="eyebrow">Credentials &amp; Recognition</span>
+      <h2>Achievements &amp; <span class="g">Certifications</span></h2>
+      <div class="section-divider"></div>
+      <p style="max-width:640px;margin:1.2rem auto 0;color:var(--gray);font-size:.92rem;line-height:1.7;">Beyond the classroom, Khem Kumari is a nationally and internationally trained coach and competition official in Table Tennis and Netball — recognized by ITTF, the Nepal Olympic Committee, Tribhuvan University, and Netball Australia, among others.</p>
+    </div>
+
+    <div class="achieve-stats-row fade-up">
+      <div class="achieve-stat"><span class="num" data-target="7">0</span><span class="lbl">Certifications</span></div>
+      <div class="achieve-stat"><span class="num" data-target="2">0</span><span class="lbl">Sports Coached</span></div>
+      <div class="achieve-stat"><span class="num" data-target="5">0</span><span class="lbl">Partner Organizations</span></div>
+      <div class="achieve-stat"><span class="num">2016–2017</span><span class="lbl">Years Active</span></div>
+    </div>
+
+    <div class="achieve-filter-row fade-up">
+      <button type="button" class="achieve-filter-btn active" data-filter="all">All (7)</button>
+      <button type="button" class="achieve-filter-btn" data-filter="tt">🏓 Table Tennis (4)</button>
+      <button type="button" class="achieve-filter-btn" data-filter="nb">🏐 Netball (3)</button>
+    </div>
+
+    <div class="achieve-grid">
+      <div class="achieve-card fade-up" data-cat="tt">
+        <div class="achieve-card-inner">
+          <div class="achieve-front">
+            <div class="achieve-icon-row"><span class="achieve-icon">🏓</span><span class="achieve-cat-badge">Table Tennis</span></div>
+            <div class="achieve-title">ITTF School Teacher Course</div>
+            <div class="achieve-org">Nepal Olympic Committee · ITTF · ANTTA · KDTTA</div>
+            <div class="achieve-date">23 October 2016</div>
+            <p class="achieve-short">Olympic Solidarity — Table Tennis Technical Course, School Teachers Course.</p>
+            <div class="achieve-hint">Tap to see details →</div>
+          </div>
+          <div class="achieve-back">
+            <h4>Full Details</h4>
+            <p>Completed the 6-hour ITTF School Teacher Course under the "Olympic Solidarity – Developing National Sports Instructor" program, conducted by ITTF Expert Arif Khan at the ANTTA Center, Kathmandu. Organized by the Nepal Table Tennis Association in collaboration with the International Table Tennis Federation and the Nepal Olympic Committee.</p>
+            <div class="achieve-hint">Tap to flip back</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="achieve-card fade-up d1" data-cat="tt">
+        <div class="achieve-card-inner">
+          <div class="achieve-front">
+            <div class="achieve-icon-row"><span class="achieve-icon">🏓</span><span class="achieve-cat-badge">Table Tennis</span></div>
+            <div class="achieve-title">Officiating Recognition</div>
+            <div class="achieve-org">Tribhuvan University, Faculty of Education</div>
+            <div class="achieve-date">Falgun 17 – Chaitra 24, 2072 B.S.</div>
+            <p class="achieve-short">Certificate of Appreciation for successful sports officiating.</p>
+            <div class="achieve-hint">Tap to see details →</div>
+          </div>
+          <div class="achieve-back">
+            <h4>Full Details</h4>
+            <p>Awarded a Certificate of Appreciation by Tribhuvan University's Central Department of Education for successfully officiating the Inter-Department Sports and Games Competition, held at the University Campus, Kirtipur, Kathmandu.</p>
+            <div class="achieve-hint">Tap to flip back</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="achieve-card fade-up d2" data-cat="tt">
+        <div class="achieve-card-inner">
+          <div class="achieve-front">
+            <div class="achieve-icon-row"><span class="achieve-icon">🏓</span><span class="achieve-cat-badge">Table Tennis</span></div>
+            <div class="achieve-title">OPS Inter-School Competition</div>
+            <div class="achieve-org">Organization of Private Schools (OPS)</div>
+            <div class="achieve-date">29 Jestha, 2073 B.S.</div>
+            <p class="achieve-short">Recognized for organizing the 2nd OPS inter-school Table Tennis competition.</p>
+            <div class="achieve-hint">Tap to see details →</div>
+          </div>
+          <div class="achieve-back">
+            <h4>Full Details</h4>
+            <p>Recognized by the Organization of Private Schools for outstanding contribution in holding the 2nd OPS Inter-School Open Table Tennis Competition, coordinated by Pushpa Kunja High School, Samakhusi.</p>
+            <div class="achieve-hint">Tap to flip back</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="achieve-card fade-up d3" data-cat="tt">
+        <div class="achieve-card-inner">
+          <div class="achieve-front">
+            <div class="achieve-icon-row"><span class="achieve-icon">🏓</span><span class="achieve-cat-badge">Table Tennis</span></div>
+            <div class="achieve-title">Competition Official</div>
+            <div class="achieve-org">Organization of Private Schools (OPS)</div>
+            <div class="achieve-date">14 Shrawan, 2074 B.S.</div>
+            <p class="achieve-short">Certified as an Official for a school-level Table Tennis competition.</p>
+            <div class="achieve-hint">Tap to see details →</div>
+          </div>
+          <div class="achieve-back">
+            <h4>Full Details</h4>
+            <p>Certified by the Organization of Private Schools for serving as an Official in a Table Tennis competition.</p>
+            <div class="achieve-hint">Tap to flip back</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="achieve-card fade-up" data-cat="nb">
+        <div class="achieve-card-inner">
+          <div class="achieve-front">
+            <div class="achieve-icon-row"><span class="achieve-icon">🏐</span><span class="achieve-cat-badge">Netball</span></div>
+            <div class="achieve-title">National Coaching &amp; Umpiring Workshop</div>
+            <div class="achieve-org">Nepal Netball Association</div>
+            <div class="achieve-date">3–8 April 2016</div>
+            <p class="achieve-short">Certificate of Completion — 18 training hours.</p>
+            <div class="achieve-hint">Tap to see details →</div>
+          </div>
+          <div class="achieve-back">
+            <h4>Full Details</h4>
+            <p>Successfully completed the 1st National Netball Coaching &amp; Umpiring Workshop 2016 in Kathmandu, organized by the Nepal Netball Association, completing 18 merit/attendance hours.</p>
+            <div class="achieve-hint">Tap to flip back</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="achieve-card fade-up d1" data-cat="nb">
+        <div class="achieve-card-inner">
+          <div class="achieve-front">
+            <div class="achieve-icon-row"><span class="achieve-icon">🏐</span><span class="achieve-cat-badge">Netball</span></div>
+            <div class="achieve-title">Introduction to Coaching Course</div>
+            <div class="achieve-org">One Netball Asia · Netball Australia</div>
+            <div class="achieve-date">12–16 July 2016</div>
+            <p class="achieve-short">Certificate of Participation.</p>
+            <div class="achieve-hint">Tap to see details →</div>
+          </div>
+          <div class="achieve-back">
+            <h4>Full Details</h4>
+            <p>Participated in the Introduction to Coaching Course presented by One Netball Asia, on behalf of Netball Australia and the Nepal Netball Association.</p>
+            <div class="achieve-hint">Tap to flip back</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="achieve-card fade-up d2" data-cat="nb">
+        <div class="achieve-card-inner">
+          <div class="achieve-front">
+            <div class="achieve-icon-row"><span class="achieve-icon">🏐</span><span class="achieve-cat-badge">Netball</span></div>
+            <div class="achieve-title">Leadership &amp; Child Protection Training</div>
+            <div class="achieve-org">One Netball Asia · Netball Australia</div>
+            <div class="achieve-date">23–25 August 2016</div>
+            <p class="achieve-short">Certificate of Training.</p>
+            <div class="achieve-hint">Tap to see details →</div>
+          </div>
+          <div class="achieve-back">
+            <h4>Full Details</h4>
+            <p>Completed training in Leadership, Child Protection, First Aid, Community Club Management, and Good Governance through One Netball Asia.</p>
+            <div class="achieve-hint">Tap to flip back</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── WHY / APPROACH ─── -->
+<section id="why">
+  <div class="section-inner">
+    <div class="section-hd fade-up">
+      <span class="eyebrow">Teaching Philosophy</span>
+      <h2>Why Learn <span class="g">With Khem Kumari</span></h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="why-grid">
+      <div class="why-card fade-up">
+        <span class="why-icon">🌱</span>
+        <h3>Patient &amp; Personalized</h3>
+        <p>Every student learns differently — lessons are adapted to each student's pace and learning style.</p>
+      </div>
+      <div class="why-card fade-up d1">
+        <span class="why-icon">🗣️</span>
+        <h3>Bilingual Support</h3>
+        <p>Comfortable teaching and explaining concepts in both Nepali and English as needed.</p>
+      </div>
+      <div class="why-card fade-up d2">
+        <span class="why-icon">📚</span>
+        <h3>Strong Foundation</h3>
+        <p>A Master's degree in Education and hands-on classroom experience inform every lesson.</p>
+      </div>
+      <div class="why-card fade-up d3">
+        <span class="why-icon">🤝</span>
+        <h3>Growth Mindset</h3>
+        <p>Coaching and officiating experience in Table Tennis and Netball brings the same encouragement, discipline, and fair play into the classroom.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CONTACT ─── -->
+<section class="contact-section" id="contact">
+  <div class="section-inner">
+    <h2 style="text-align:center; margin-bottom:2.2rem; font-size:clamp(2rem,4vw,3rem); font-weight:800; background:linear-gradient(135deg,#ffffff 0%,#FFD23F 60%,#FF4D8D 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; filter:drop-shadow(0 2px 8px rgba(0,0,0,0.35));">Let's Connect</h2>
+    <div class="contact-inner">
+      <div class="contact-left fade-up">
+        <h2>Ready to Start<br/><span class="g">Learning Together?</span></h2>
+        <p>Whether you're looking for online tutoring, in-person sessions, or sports coaching for a student, reach out and let's find a schedule that works for you.</p>
+        <div>
+          <div class="contact-item">
+            <div class="ci-icon">✉️</div>
+            <div><div class="ci-label">Email</div><div class="ci-val">kdhungana6@gmail.com</div></div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon">💻</div>
+            <div><div class="ci-label">Online Sessions</div><div class="ci-val">Teams, Google Meet or Zoom</div></div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon">⏱️</div>
+            <div><div class="ci-label">Response Time</div><div class="ci-val">Usually within 24–48 hours</div></div>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form fade-up d2" id="kemContactForm">
+        <h3 style="margin-bottom:1.5rem; font-size:1.15rem;">Send a Message</h3>
+        <div class="form-row">
+          <div class="form-group"><label>First Name *</label><input type="text" name="firstName" placeholder="Jane" required /></div>
+          <div class="form-group"><label>Last Name *</label><input type="text" name="lastName" placeholder="Smith" required /></div>
+        </div>
+        <div class="form-group"><label>Email Address *</label><input type="email" name="email" placeholder="jane@example.com" required /></div>
+        <div class="form-group"><label>Student's Grade / Age (optional)</label><input type="text" name="studentGrade" placeholder="e.g. Grade 7, age 12" /></div>
+        <div class="form-group">
+          <label>I'm Interested In</label>
+          <select name="interest">
+            <option value="">Select an option...</option>
+            <option>Online Tutoring</option>
+            <option>In-Person Tutoring</option>
+            <option>Sports Coaching (Table Tennis / Netball)</option>
+            <option>General Inquiry</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Message</label><textarea name="message" placeholder="Tell me a bit about the subject, schedule, or goals you have in mind..." required></textarea></div>
+        <button type="submit" class="btn-submit">💌 Send Message</button>
+      </form>
+    </div>
+    <div style="text-align:center; margin-top:2.5rem;">
+      <p style="font-size:.88rem; font-weight:700; letter-spacing:.06em; margin-bottom:.85rem; background:linear-gradient(135deg,#ffffff,#FFD23F); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">Or reach out directly:</p>
+      <a href="https://mail.google.com/mail/?view=cm&to=kdhungana6@gmail.com" target="_blank" class="email-press-btn"
+         style="margin:.3rem .5rem; padding:.7rem 1.6rem; border-radius:30px; background:linear-gradient(135deg,var(--coral),var(--gold)); color:#2B0B3F; font-weight:700; font-size:.88rem; text-decoration:none; letter-spacing:.05em; border:1.5px solid var(--coral);">
+        ✉ Email Khem Kumari
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo" style="text-decoration:none;">
+        <svg class="logo-mark" style="width:52px;height:52px;" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="46" fill="#1A0729" stroke="#FF4D8D" stroke-width="2.5"/>
+          <text x="50" y="60" text-anchor="middle" font-family="Fraunces, serif" font-size="34" font-weight="800" fill="#ffffff">KD</text>
+        </svg>
+        <div class="logo-text"><span class="brand" style="font-size:1.1rem;">Khem Kumari Dhungana</span></div>
+      </div>
+      <p>Educator, Master's in Education, and certified Table Tennis &amp; Netball coach — offering online and in-person tutoring for students who want to learn, grow, and succeed.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#tutoring">Tutoring</a></li>
+        <li><a href="#coaching">Coaching</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#why">Approach</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:kdhungana6@gmail.com">kdhungana6@gmail.com</a></li>
+        <li><a href="#tutoring">Online (Teams / Meet / Zoom)</a></li>
+        <li><a href="#tutoring">In-Person Sessions</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© <span id="copy-yr"></span> Khem Kumari Dhungana. All rights reserved.</div>
+    <div>
+      <button type="button" class="footer-privacy-link" id="openPrivacy">Privacy Policy</button>
+      &nbsp;·&nbsp; Made with <span class="heart">♥</span> for students
+    </div>
+  </div>
+</footer>
+
+<!-- ─── PRIVACY MODAL ─── -->
+<div id="privacy-modal">
+  <div class="privacy-box">
+    <h3>Privacy Notice</h3>
+    <p>This website is a personal tutoring &amp; coaching site for Khem Kumari Dhungana. Information submitted through the contact form (such as your name, email, and message) is used only to respond to your inquiry and schedule tutoring or coaching sessions. It is never sold, and is only shared with the third-party services below that help this site function.</p>
+    <p>This site uses <strong>Formspree</strong> to process the contact form. When you submit the form, your details (such as name, email, and message) are sent through Formspree's servers to Khem Kumari's email inbox. Formspree does not sell your data — see Formspree's own privacy policy at formspree.io/legal/privacy-policy for details on how they handle submitted information.</p>
+    <p>This site uses <strong>Tidio</strong> to power the live chat widget. If you use the chat, Tidio may collect information such as your messages, browser/device details, and IP address to operate the chat feature and may use cookies to do so — see Tidio's privacy policy at tidio.com/privacy-policy for details. No sensitive personal information should be shared through the chat or contact form.</p>
+    <p>If you have questions about your information, contact kdhungana6@gmail.com.</p>
+    <button type="button" class="privacy-close" id="closePrivacy">Close</button>
+  </div>
+</div>
+
+<button id="scroll-top" aria-label="Back to top">&#x2191;</button>
+
+<!-- ─── TIDIO LIVE CHAT WIDGET (Khem Kumari's own account) ─── -->
+<script src="//code.tidio.co/5fzwqmbohkwtylfgndozgb7gonciv2lr.js" async></script>
+
+<script>
+  document.getElementById("copy-yr").textContent = new Date().getFullYear();
+
+  // ─── SCROLL TO TOP ───
+  var scrollTopBtn = document.getElementById('scroll-top');
+  window.addEventListener('scroll', function() {
+    scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
+  });
+  scrollTopBtn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // ─── LIVE CLOCK ───
+  function updateClock() {
+    var now = new Date();
+    var days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var d = days[now.getDay()];
+    var mo = months[now.getMonth()];
+    var dt = now.getDate();
+    var yr = now.getFullYear();
+    var h = now.getHours();
+    var m = String(now.getMinutes()).padStart(2,'0');
+    var s = String(now.getSeconds()).padStart(2,'0');
+    var ampm = h >= 12 ? 'PM' : 'AM';
+    h = h % 12 || 12;
+    var el = document.getElementById('live-clock');
+    el.textContent = d + ', ' + mo + ' ' + dt + ', ' + yr + ' · ' + h + ':' + m + ':' + s + ' ' + ampm;
+    el.classList.remove('flip');
+    void el.offsetWidth;
+    el.classList.add('flip');
+  }
+  updateClock();
+  setInterval(updateClock, 1000);
+
+  // ─── PARTICLE CANVAS ───
+  var canvas = document.getElementById('bg-canvas');
+  var ctx = canvas.getContext('2d');
+  var W, H, particles = [];
+  function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
+  resize();
+  window.addEventListener('resize', resize);
+  function Particle() { this.reset(); }
+  Particle.prototype.reset = function() {
+    this.x = Math.random() * W; this.y = Math.random() * H;
+    this.r = Math.random() * 1.5 + .3;
+    this.vx = (Math.random() - .5) * .3; this.vy = (Math.random() - .5) * .3;
+    var colors = ['rgba(255,77,141,', 'rgba(123,97,255,', 'rgba(255,210,63,'];
+    this.color = colors[Math.floor(Math.random() * colors.length)];
+    this.alpha = Math.random() * .4 + .1;
+  };
+  Particle.prototype.update = function() {
+    this.x += this.vx; this.y += this.vy;
+    if (this.x < 0 || this.x > W || this.y < 0 || this.y > H) this.reset();
+  };
+  Particle.prototype.draw = function() {
+    ctx.beginPath(); ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+    ctx.fillStyle = this.color + this.alpha + ')'; ctx.fill();
+  };
+  for (var i = 0; i < 110; i++) particles.push(new Particle());
+  function drawConnections() {
+    for (var i = 0; i < particles.length; i++) {
+      for (var j = i + 1; j < particles.length; j++) {
+        var dx = particles[i].x - particles[j].x, dy = particles[i].y - particles[j].y;
+        var d = Math.sqrt(dx*dx + dy*dy);
+        if (d < 100) {
+          ctx.beginPath(); ctx.moveTo(particles[i].x, particles[i].y); ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.strokeStyle = 'rgba(255,77,141,' + (.06 * (1 - d/100)) + ')'; ctx.lineWidth = .5; ctx.stroke();
+        }
+      }
+    }
+  }
+  function animate() { ctx.clearRect(0,0,W,H); particles.forEach(function(p){ p.update(); p.draw(); }); drawConnections(); requestAnimationFrame(animate); }
+  animate();
+
+  // ─── SCROLL REVEAL ───
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: .1 });
+  document.querySelectorAll('.fade-up').forEach(function(el) { observer.observe(el); });
+
+  // ─── NAVBAR SCROLL SHADE ───
+  window.addEventListener('scroll', function() {
+    var nav = document.getElementById('navbar');
+    nav.style.background = window.scrollY > 50 ? 'rgba(26,7,41,0.97)' : 'rgba(26,7,41,0.9)';
+  });
+
+  // ─── SMOOTH SCROLL ───
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      var href = a.getAttribute('href');
+      if (href.length > 1) {
+        var target = document.querySelector(href);
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      }
+    });
+  });
+
+  // ─── MOBILE MENU TOGGLE ───
+  var menuToggle = document.getElementById('menuToggle');
+  var navLinks = document.getElementById('navLinks');
+  menuToggle.addEventListener('click', function() {
+    menuToggle.classList.toggle('open');
+    navLinks.classList.toggle('mobile-open');
+  });
+  navLinks.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      menuToggle.classList.remove('open');
+      navLinks.classList.remove('mobile-open');
+    });
+  });
+
+  // ─── FORM SUBMIT (real submission via Formspree) ───
+  var kemContactForm = document.getElementById('kemContactForm');
+  kemContactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var btn = kemContactForm.querySelector('.btn-submit');
+    var origText = btn.textContent;
+    var formData = new FormData(kemContactForm);
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    fetch('https://formspree.io/f/mjgqjkbq', {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    }).then(function(response) {
+      if (response.ok) {
+        btn.textContent = '✅ Message Sent! I\'ll be in touch soon.';
+        btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+        kemContactForm.reset();
+      } else {
+        btn.textContent = '⚠️ Something went wrong — please email directly.';
+        btn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+      }
+    }).catch(function() {
+      btn.textContent = '⚠️ Something went wrong — please email directly.';
+      btn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+    }).finally(function() {
+      btn.disabled = false;
+      setTimeout(function() {
+        btn.textContent = origText;
+        btn.style.background = '';
+      }, 5000);
+    });
+  });
+
+  // ─── TEAMS BUTTON PLACEHOLDER NOTICE ───
+  function meetLinkComingSoon(platform) {
+    alert(platform + ' link coming soon! Please email kdhungana6@gmail.com or use the contact form to schedule your online tutoring session for now.');
+  }
+  document.getElementById('teamsBtn').addEventListener('click', function(e) { e.preventDefault(); meetLinkComingSoon('Microsoft Teams'); });
+  document.getElementById('meetBtn').addEventListener('click', function(e) { e.preventDefault(); meetLinkComingSoon('Google Meet'); });
+  document.getElementById('zoomBtn').addEventListener('click', function(e) { e.preventDefault(); meetLinkComingSoon('Zoom'); });
+
+  // ─── PRIVACY MODAL ───
+  var privacyModal = document.getElementById('privacy-modal');
+  document.getElementById('openPrivacy').addEventListener('click', function() { privacyModal.classList.add('open'); });
+  document.getElementById('closePrivacy').addEventListener('click', function() { privacyModal.classList.remove('open'); });
+  privacyModal.addEventListener('click', function(e) { if (e.target === privacyModal) privacyModal.classList.remove('open'); });
+
+  // ─── ACHIEVEMENTS: FILTER, FLIP CARDS, COUNT-UP STATS ───
+  var achieveFilterBtns = document.querySelectorAll('.achieve-filter-btn');
+  var achieveCards = document.querySelectorAll('.achieve-card');
+  achieveFilterBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      achieveFilterBtns.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var cat = btn.getAttribute('data-filter');
+      achieveCards.forEach(function(card) {
+        var show = (cat === 'all' || card.getAttribute('data-cat') === cat);
+        card.style.display = show ? '' : 'none';
+        if (!show) card.classList.remove('flipped');
+      });
+    });
+  });
+  achieveCards.forEach(function(card) {
+    card.addEventListener('click', function() { card.classList.toggle('flipped'); });
+  });
+
+  var statNums = document.querySelectorAll('.achieve-stat .num[data-target]');
+  var statObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (!entry.isIntersecting) return;
+      var el = entry.target;
+      if (el.dataset.counted) return;
+      el.dataset.counted = '1';
+      var target = parseInt(el.getAttribute('data-target'), 10);
+      var duration = 1100;
+      var startTime = null;
+      function step(ts) {
+        if (!startTime) startTime = ts;
+        var progress = Math.min((ts - startTime) / duration, 1);
+        el.textContent = Math.floor(progress * target);
+        if (progress < 1) requestAnimationFrame(step);
+        else el.textContent = target;
+      }
+      requestAnimationFrame(step);
+      statObserver.unobserve(el);
+    });
+  }, { threshold: .4 });
+  statNums.forEach(function(el) { statObserver.observe(el); });
+</script>
+
+</body>
+</html>
